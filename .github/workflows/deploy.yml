@@ -23,6 +23,8 @@ jobs:
         echo `pwd`/mdbook >> $GITHUB_PATH
     - name: Deploy GitHub Pages
       run: |
+        sed -i '/function pdfjs_url(file_url) {/,/^}/ s/prefix=""/prefix="\/notebook"/' scripts/utils.js
+
         for source_path in notes/*; do
           pushd "${source_path}"
           mdbook build
@@ -41,6 +43,7 @@ jobs:
         for source_path in ../notes/*; do
           mv "${source_path}/book" "$(basename "${source_path}")"
         done
+        mv ../scripts .
         mv ../index.html .
 
         git add .
