@@ -6,6 +6,8 @@ src = "src"
 title = "Database Notes"
 
 [output.html]
+default-theme = "rust"
+preferred-dark-theme = "rust"
 no-section-label = true
 additional-js = [
 	"src/scripts/utils.js",
