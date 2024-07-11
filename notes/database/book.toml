@@ -6,4 +6,7 @@ src = "src"
 title = "Database Notes"
 
 [output.html]
-additional-js = ["src/scripts/utils.js"]
+additional-js = [
+	"src/scripts/utils.js",
+	"src/scripts/latex.js",
+]
