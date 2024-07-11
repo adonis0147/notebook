@@ -3,7 +3,7 @@ authors = ["Adonis Ling"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Database Notes"
+title = "Algorithm Notes"
 
 [output.html]
 no-section-label = true
